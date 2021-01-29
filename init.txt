@@ -1,1 +1,36 @@
 initial
+
+1. Научится работать с git. 
+Попрактиковаться в создании новых веток. 
+Использовать новые ветки для разработки новых фич, а потом сливать новые ветки с основной.
+Удалять ветки после слияния.
+
+git checkout -b "webpack"
+git add .
+git commit -m "create webpack.config"
+git push -u origin webpack
+
+npm install webpack webpack-cli --save-dev
+
+*Создает HTML-файл на основе шаблона
+npm install html-webpack-plugin --save-dev
+*CSS
+npm install --save-dev mini-css-extract-plugin
+*Фавикон
+npm install copy-webpack-plugin --save-dev
+*Удаляет/очищает директорию сборки проекта
+npm install --save-dev clean-webpack-plugin
+
+(*Чтобы знать о неиспользуемых файлах в проекте
+npm i unused-files-webpack-plugin
+*Чтобы сразу увидеть круговую зависимость и убрать ее
+npm i circular-dependency-plugin
+*Замерить каждый шаг сборки и найти проблемы
+npm i speed-measure-webpack-plugin)
+
+
+npm install sass-loader sass webpack --save-dev
+npm install css-loader --save-dev
+
+npm install cross-env --save-dev
+npm install webpack-dev-server --save-dev
