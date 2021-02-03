@@ -1,5 +1,67 @@
-$red: rgb(255, 253, 159);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap');
+@import '~normalize.css';
+
+@import 'header';
+@import 'main';
+@import 'report';
+@import 'footer';
+
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background: $red;
+  font-family: 'Montserrat', sans-serif;
+  background-color: $beige;
+}
+
+.app-container {
+
+  width: $app-width-1440;
+  background-color: $white;
+  color: $darkblue;
+  font-size: $app-fs-1440;
+  font-weight: 400;
+
+  @include _1920() {
+    margin: 0 (1920px - $app-width-1440) / 2;
+  }
+  @include _1680() {
+    margin: 0 (1680px - $app-width-1440) / 2;
+  }
+  @include _1440() {
+    margin: 0 (1440px - $app-width-1440) / 2;
+  }
+  @include _1366() {
+    width: $app-width-1440 - ($app-width-1440 - 1366px);
+  }
+  @include _1280() {
+    width: $app-width-1440 - ($app-width-1440 - 1280px);
+  }
+  @include _1024() {
+    width: $app-width-1440 - ($app-width-1440 - 1024px);
+  }
+  @include _800() {
+    width: $app-width-1440 - ($app-width-1440 - 800px);
+    font-size: $app-fs-1440 - 2px;
+  }
+  @include _768() {
+    width: $app-width-1440 - ($app-width-1440 - 768px);
+  }
+  @include _600() {
+    width: $app-width-1440 - ($app-width-1440 - 600px);
+  }
+  @include _533() {
+    width: $app-width-1440 - ($app-width-1440 - 533px);
+  }
+  @include _360() {
+    width: $app-width-1440 - ($app-width-1440 - 360px);
+  }
+  @include _320() {
+    width: $app-width-1440 - ($app-width-1440 - 320px);
+  }
 }

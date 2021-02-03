@@ -1,14 +1,7 @@
 const foo = new Promise((resolve) => {
-  const message = 'Асинхронная операция';
+  const message = 'Привет, Сергей! Это асинхронная операция из module.js';
   resolve(message);
 });
 
 foo.then(console.log);
-
-
-function sum(num1, num2) {
-  return num1 + num2;
-}
-
-console.log(sum(1, 3));
 

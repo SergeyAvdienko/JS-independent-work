@@ -1,0 +1,223 @@
+@import 'variables';
+@import 'mixins';
+
+.site__footer {
+  background-color: $orange;
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+  padding: 0px $distance 50px $distance;
+  .title-h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .address {
+    font-style: normal;
+    & .address__item {
+        margin-bottom: 10px;
+      }
+  }
+  @include _1024() {
+    padding: 0px $distance 200px $distance;
+  }
+  @include _800() {
+    margin-top: 50px;
+    padding: 0px $distance - 16px 300px $distance - 16px;
+    .title-h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  @include _600() {
+    padding: 0px $distance - 35px 200px $distance - 35px;
+    .title-h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+  }
+  @include _533() {
+    margin-top: 35px;
+    padding: 0px $distance - 35px 150px $distance - 35px;
+    .title-h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+  @include _360() {
+    margin-top: 50px;
+    padding: 0px $distance - 45px 200px $distance - 45px;
+    flex-direction: column;
+    .title-h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+  & .site__footer-contact {
+    flex: 1;
+    color: $white;
+    margin-top: 40px;
+    & .site__footer-address {
+        margin-bottom: 40px;
+      }
+      @include _360() {
+        .site__footer-address {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .site__footer-support {
+      flex: 2;
+      color: $white;
+      margin: 40px 0px 40px 47px;
+    }
+    .form {
+      display: flex;
+      flex-direction: row;
+      & .form__column-left {
+          display: flex;
+          flex: 2;
+          flex-direction: column;
+          & .form__column-label {
+              font-size: 12px;
+              margin-bottom: 10px;
+            }
+            .form__column-textarea {
+              @include input(100px, 658px, $darkblue, $darkblue);
+            }
+            @include _1024() {
+              .form__column-textarea {
+                @include input(80px, 482px, $darkblue, $darkblue);
+              }
+            }
+            @include _800() {
+              .form__column-label {
+                font-size: 10px;
+              }
+              .form__column-textarea {
+                @include input(80px, 389px, $darkblue, $darkblue);
+              }
+            }
+            @include _768() {
+              .form__column-textarea {
+                @include input(80px, 357px, $darkblue, $darkblue);
+              }
+            }
+            @include _600() {
+              .form__column-textarea {
+                @include input(80px, 412px, $darkblue, $darkblue);
+              }
+            }
+            @include _533() {
+              .form__column-textarea {
+                @include input(80px, 345px, $darkblue, $darkblue);
+              }
+            }
+            @include _360() {
+              .form__column-textarea {
+                @include input(80px, 333px, $darkblue, $darkblue);
+              }
+            }
+            @include _320() {
+              .form__column-textarea {
+                @include input(80px, 295px, $darkblue, $darkblue);
+              }
+            }
+        }
+      & .form__column-right {
+          margin-left: 20px;
+          @include _800() {
+            margin-left: 10px;
+          }
+          @include _600() {
+            margin-left: 0px;
+          }
+          & label {
+              font-size: 12px;
+            }
+            input {
+              @include input(30px, 185px, $darkblue, $darkblue);
+              margin-top: 10px;
+            }
+            button {
+              margin-top: 25px;
+              @include button($yellow, $darkblue, 40px, 185px);
+            }
+            @include _800() {
+              label {
+                font-size: 10px;
+              }
+              input {
+                @include input(30px, 157px, $darkblue, $darkblue);
+                margin-top: 10px;
+              }
+              button {
+                margin-top: 17px;
+                @include button($yellow, $darkblue, 30px, 157px);
+              }
+            }
+            @include _600() {
+              label {
+                margin-right: 10px;
+              }
+              input {
+                @include input(30px, 260px, $darkblue, $darkblue);
+              }
+              button {
+                @include button($yellow, $darkblue, 30px, 412px);
+              }
+            }
+            @include _533() {
+              input {
+                @include input(30px, 193px, $darkblue, $darkblue);
+              }
+              button {
+                @include button($yellow, $darkblue, 30px, 345px);
+              }
+            }
+            @include _360() {
+              input {
+                @include input(30px, 333px, $darkblue, $darkblue);
+              }
+              button {
+                @include button($yellow, $darkblue, 30px, 333px);
+              }
+            }
+            @include _320() {
+              input {
+                @include input(30px, 295px, $darkblue, $darkblue);
+              }
+              button {
+                @include button($yellow, $darkblue, 30px, 295px);
+              }
+            }
+        }
+    }
+    @include _800() {
+      .site__footer-support {
+        margin: 40px 34px 40px 20px;
+      }
+    }
+    @include _600() {
+      .form {
+        flex-direction: column;
+      }
+    }
+    @include _360() {
+      .site__footer-contact {
+        margin-top: 25px;
+        margin-left: 10px;
+      }
+      .site__footer-support {
+        margin: 0px 0px 40px 10px;
+      }
+      .form {
+        width: 340px;
+      }
+    }
+    @include _320() {
+      .form {
+        width: 297px;
+      }
+    }
+}

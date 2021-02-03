@@ -1,16 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Independent work</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>YourHabit.ru</title>
 </head>
 
 <body>
 
-  <div class="container" id="app">
-    <h1>Привет, я!</h1>
+  <div id="app" class="app-container">
+
+    <div class="site">
+
+      <header class="site__header">
+
+        <div class="left">
+
+          <div class="left__img logo-css">
+            <div class="logo-css__circle">
+              <div class="logo-css__letter">Y</div>
+            </div>
+          </div>
+
+          <div class="left__title">
+            <h1 class="left__h1 title-h1">YourHabit.ru</h1>
+            <p class="left__subtitle">#Продажи #Обучение #Общение с клиентом</p>
+          </div>
+
+        </div>
+
+        <div class="right">
+
+          <div class="right__container">
+            <div class="right__column-left" id="userInfo">
+              <p>Войдите на сайт</p>
+              <p>используя сервис Google</p>
+            </div>
+            <div class="right__column-right">
+              <div class="right__column-default">
+                <button id="data-login">Войти</button>
+              </div>
+              <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </header>
+
+      <div class="site__main">
+
+        <section class="site__main-schedule" data-state-shedule="false">
+
+          <h2 class="title-h2">Расписание</h2>
+
+          <div class="site__main-button-close">
+            <button id="data-close-shedule">Закрыть меню</button>
+          </div>
+
+          <div class="site__main-select-date">
+
+            <h3 class="title-h3"> Выбрать день: </h3>
+
+            <input class="site__main-input" type="date">
+
+          </div>
+
+          <div class="site__main-list list">
+
+            <h3 class="list__title title-h3">
+              Расписание на
+              <span> 31.01.2021 </span>
+            </h3>
+
+            <ul class="list__ul">
+
+              <li class="list__li">
+                <p class="list__p">08:00 - 09:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">09:00 - 10:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">10:00 - 11:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">11:00 - 12:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">12:00 - 13:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">13:00 - 14:00</p>
+                <div class="list__block-disabled">
+                  <button class="list__disabled">Занято</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">14:00 - 15:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">15:00 - 16:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">16:00 - 17:00</p>
+                <div class="list__block-closed">
+                  <button class="list__closed">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">17:00 - 18:00</p>
+                <div class="list__block-confirm">
+                  <button class="list__confirm">Записаться</button>
+                  <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
+            <h3 class="list__title top title-h3"> Моё расписание </h3>
+
+            <ul class="list__ul">
+
+              <li class="list__li">
+                <p class="list__p">
+                  <span>16:00 - 17:00</span>
+                  <span>31.12.2021</span>
+                </p>
+                <div class="list__block-closed-small">
+                  <button class="list__closed-small">
+                    <i class="material-icons">close</i>
+                  </button>
+                  <div class="list__spinner-closed small-spinner">
+                    <i class="material-icons">close</i>
+                  </div>
+                </div>
+              </li>
+
+              <li class="list__li">
+                <p class="list__p">
+                  <span>16:00 - 17:00</span>
+                  <span>31.12.2021</span>
+                </p>
+                <div class="list__block-disabled-small">
+                  <button class="list__disabled-small">
+                    <i class="material-icons">shopping_cart</i>
+                  </button>
+                  <div class="list__spinner-disabled small-spinner">
+                    <i class="material-icons">shopping_cart</i>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </section>
+
+        <section class="site__main-programm">
+
+          <h2 class="title-h2">Программа</h2>
+
+          <div class="site__main-menu menu">
+
+            <ul class="menu__ul">
+              <li class="menu__li menu__active"> Программа </li>
+              <li class="menu__li"> Занятие 1-2 </li>
+              <li class="menu__li"> Занятие 3-4 </li>
+              <li class="menu__li"> Занятие 5-6 </li>
+              <li class="menu__li"> Занятие 7-8 </li>
+            </ul>
+
+          </div>
+
+          <div class="site__main-columns">
+
+            <div class="site__main-left-column">
+
+              <div class="site__main-download">
+                <button class="button">
+                  <i class="material-icons">file_download</i>
+                </button>
+                <div class="small-spinner">
+                  <i class="material-icons">file_download</i>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="site__main-right-column">
+
+              <div class="site__main-header">
+
+                <div class="info">
+                  <p><i class="material-icons">shopping_cart</i></p>
+                  <p> Стоимость занятия: 1000 <small> рублей </small> </p>
+                  <p><i class="material-icons">feedback</i></p>
+                  <p> 12 <small> отзывы </small> </p>
+                </div>
+
+              </div>
+
+              <h3 class="site__main-title title-h3">8 занятий обучения продажам</h3>
+
+              <p class="description">
+                Программа спланирована опытными тренерами по продажам и включает в себя практические упражнения для
+                развития
+                навыков продаж. От аналитики sales-процесса и его отражения в CRM, до выстраивания долговременных
+                отношений
+                с клиентом.
+              </p>
+
+              <div class="site__main-schedule-visible">
+                <button id="data-open-shedule">
+                  <i class="material-icons">create</i>
+                  <span>Записаться на занятие</span>
+                </button>
+              </div>
+
+              <div class="content">
+
+                <h4 class="content__title title-h4">Основные цели программы:</h4>
+
+                <ol class="content__ol">
+                  <li class="content__li">Научить основным принципам работы с CRM-системой</li>
+                  <li class="content__li">Научить работе с Sales-процессом</li>
+                  <li class="content__li">Научить эффективной коммуникации с клиентом</li>
+                </ol>
+
+                <h4 class="content__title title-h4">Блок-схема программы:</h4>
+
+                <img class="content__img" src="plan.gif" alt="Блок-схема программы">
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
+      <section class="site__report">
+
+        <h3 class="site__report-title title-h3">Отчет о выполнении практических заданий</h3>
+
+        <p class="site__report-description">В процессе курса вам предстоит выполнять практические задания, которые мы
+          будем отслеживать и обсуждать на
+          занятиях. Так как все задания являются неотъемлемой частью профессиональной ддеятельности продавца, то мы
+          должны закрепить их не просто на уровне устойчивого навыка, а на уровне привычки. Мы считаем, что лучшим
+          способом в такой ситуации является опыт применения специального трекера. Именно этот трекер вы видите ниже.
+          Наполнение трекера происходит постепенно силами тренера, а заполняется обучаемым.</p>
+
+        <div class="site__report-progress line">
+          <div class="line__progress">
+            <label class="line__label">Работа с CRM-системой</label>
+            <ul class="line__ul">
+              <li class="line__li line__success"></li>
+              <li class="line__li line__danger"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+              <li class="line__li line__default"></li>
+            </ul>
+          </div>
+          <div class="site__report-button">
+            <button class="button">Выполненно</button>
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="site__footer">
+
+        <div class="site__footer-contact">
+          <h3 class="title-h3">Контакты</h3>
+          <address class="site__footer-address address">
+            <p class="address__item">Сергей Авдиенко</p>
+            <p class="address__item">avdienko.s@gmail.com</p>
+            <p class="address__item">8-960-799-82-92</p>
+          </address>
+        </div>
+
+        <div class="site__footer-support">
+
+          <h3 class="title-h3">Техническая поддержка</h3>
+
+          <form action="" method="post" class="site__footer-form form">
+
+            <div class="form__column-left">
+              <label for="custom" class="form__column-label">Текст сообщения:</label>
+              <textarea id="custom" class="form__column-textarea"></textarea>
+            </div>
+
+            <div class="form__column-right">
+
+              <label for="email-user">Email для обратной связи:</label>
+              <input type="text" id="email-user">
+
+              <button class="button" type="submit">Отправить</button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </footer>
+
+    </div>
+
   </div>
 
 </body>

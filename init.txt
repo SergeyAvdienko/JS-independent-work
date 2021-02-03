@@ -34,3 +34,20 @@ npm install css-loader --save-dev
 
 npm install cross-env --save-dev
 npm install webpack-dev-server --save-dev
+
+git checkout main
+
+git checkout -b "html-layout"
+npm install normalize.css
+
+// 1920
+// 1680
+// 1366
+// 1280
+// 1024
+// 800
+// 768
+// 600
+// 533
+// 360
+// 320

@@ -1,0 +1,209 @@
+@import 'variables';
+@import 'mixins';
+
+.site__report {
+  padding: 0 $distance;
+  .title-h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: $darkblue;
+  }
+  @include _800() {
+    padding: 0 $distance - 16px;
+    .title-h3 {
+      font-size: 30px;
+    }
+  }
+  @include _768() {
+    padding: 0 $distance - 16px;
+    .title-h3 {
+      font-size: 29px;
+    }
+  }
+  @include _600() {
+    padding: 0 $distance - 35px;
+    .title-h3 {
+      font-size: 23px;
+    }
+  }
+  @include _533() {
+    .title-h3 {
+      font-size: 20px;
+    }
+  }
+  @include _360() {
+    padding: 0 $distance - 45px;
+  }
+  & .site__report-title {
+      margin-bottom: 20px;
+    }
+    .site__report-description {
+      margin-bottom: 25px;
+      color: $darkblue;
+      width: 1338px; 
+    }
+    .site__report-progress {
+      margin-bottom: 20px;
+    }
+    .site__report-button button {
+      @include button($green, $white, 40px, 150px);
+    }
+    .site__report-button {
+      @include spinner($green, $white, 40px, 150px, 12px, 3px);
+    }
+    @include _1366() {
+      .site__report-description {
+        width: 1267px; 
+      }
+    }
+    @include _1280() {
+      .site__report-description {
+        width: 1181px; 
+      }
+    }
+    @include _1024() {
+      .site__report-description {
+        width: 925px; 
+      }
+    }
+    @include _800() {
+      .site__report-title {
+        margin-bottom: 10px;
+      }
+      .site__report-description {
+        width: 730px; 
+      }
+      .site__report-button button {
+        @include button($green, $white, 32px, 100px);
+      }
+      .site__report-button {
+        @include spinner($green, $white, 32px, 100px, 10px, 3px);
+      }
+    }
+    @include _768() {
+      .site__report-description {
+        width: 701px; 
+      }
+    }
+    @include _600() {
+      .site__report-description {
+        width: 571px; 
+      }
+    }
+    @include _533() {
+      .site__report-description {
+        width: 503px; 
+      }
+    }
+    @include _360() {
+      .site__report-description {
+        width: 350px; 
+      }
+      .site__report-button button {
+        @include button($green, $white, 27px, 78px);
+      }
+      .site__report-button {
+        margin-left: 5px;
+        font-size: 10px;
+        @include spinner($green, $white, 27px, 78px, 10px, 3px);
+      }
+    }
+    @include _320() {
+      .site__report-description {
+        width: 307px; 
+      }
+      .site__report-button {
+        margin-left: 0px;
+      }
+    }
+  .line {
+    display: flex;
+    justify-content: space-between;
+
+    & .line__progress {
+      display: flex;
+      flex-direction: column;
+      & .line__label {
+          font-size: 12px;
+          color: $darkblue;
+          margin-bottom: 5px;
+        }
+        .line__ul {
+          list-style: none;
+          display: flex;
+          flex-direction: row;
+        }
+        .line__li {
+          width: 51px;
+          height: 20px;
+          border-radius: 5px;
+          margin-right: 5px;
+        }
+        .line__success {
+          background-color: $green;
+        }
+        .line__danger {
+          background-color: $orange;
+        }
+        .line__default {
+          border: 1px solid $beige;
+        }
+        @include _1366() {
+          .line__li {
+            width: 48px;
+          }
+        }
+        @include _1280() {
+          .line__li {
+            width: 44px;
+          }
+        }
+        @include _1024() {
+          .line__li {
+            width: 32px;
+          }
+        }
+        @include _800() {
+          .line__label {
+            font-size: 10px;
+          }
+          .line__li {
+            width: 25px;
+            height: 14px;
+          }
+        }
+        @include _768() {
+          .line__li {
+            width: 23px;
+            height: 14px;
+          }
+        }
+        @include _600() {
+          .line__li {
+            width: 17px;
+            height: 14px;
+          }
+        }
+        @include _533() {
+          .line__li {
+            width: 14px;
+            height: 14px;
+          }
+        }
+        @include _360() {
+          .line__li {
+            width: 7px;
+            height: 10px;
+          }
+        }
+        @include _360() {
+          .line__li {
+            width: 6px;
+            height: 10px;
+          }
+        }
+    }
+
+  }
+
+}
