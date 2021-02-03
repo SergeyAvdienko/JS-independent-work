@@ -1,0 +1,228 @@
+@import 'variables';
+@import 'mixins';
+
+.site__header {
+  height: $header-height;
+  padding: 0px $distance;
+  display: flex;
+  justify-content: space-between;
+  .logo-css {
+    @include logo(120px, 120px, 80px);
+  }
+  // media .site-header .logo-css
+  @include _800() {
+    height: $header-height - 36px;
+    padding: 0px $distance - 16px;
+    .logo-css {
+      @include logo(80px, 80px, 50px);
+    }
+  }
+  @include _600() {
+    height: $header-height - 76px;
+    padding: 0px $distance - 35px;
+    .logo-css {
+      @include logo(65px, 65px, 40px);
+    }
+  }
+  @include _533() {
+    height: $header-height - 96px;
+    .logo-css {
+      @include logo(55px, 55px, 30px);
+    }
+  }
+  @include _360() {
+    padding: 0px $distance - 35px;
+    .logo-css {
+      @include logo(34px, 34px, 20px);
+    }
+  }
+  .title-h1 {
+    font-weight: 800;
+    color: $darkblue;
+  }
+  & .left {
+      display: flex;
+      flex-direction: row;
+      & .left__img {
+          margin: 34px 18px 32px 0px;
+        }
+        .left__title {
+          display: flex;
+          flex-direction: column;
+          margin-top: 52px;
+        }
+        .left__h1 {
+          padding: 0px;
+          margin: 0px;
+          font-size: 60px;
+        }
+        .left__subtitle {
+          margin-top: 16px;
+          font-size: 16px;
+          font-weight: 800;
+          color: $beige;
+        }
+        // media .left__
+        @include _800() {
+          .left__img {
+            margin: 34px 10px 32px 0px;
+          }
+          .left__title {
+            margin-top: 48px;
+          }
+          .left__h1 {
+            font-size: 40px;
+          }
+          .left__subtitle {
+            margin-top: 5px;
+            font-size: 12px;
+          }
+        }
+        @include _600() {
+          .left__title {
+            margin-top: 47px;
+          }
+          .left__h1 {
+            font-size: 30px;
+          }
+          .left__subtitle {
+            margin-top: 8px;
+            font-size: 8px;
+          }
+        }
+        @include _533() {
+          .left__img {
+            margin: 15px 5px 32px 0px;
+          }
+          .left__title {
+            margin-top: 27px;
+          }
+          .left__h1 {
+            font-size: 25px;
+          }
+          .left__subtitle {
+            margin-top: 6px;
+            font-size: 6px;
+          }
+        }
+        @include _360() {
+          .left__img {
+            margin: 20px 5px 32px 0px;
+          }
+          .left__title {
+            margin-top: 29px;
+          }
+          .left__h1 {
+            font-size: 18px;
+          }
+          .left__subtitle {
+            display: none;
+          }
+        }
+    }
+    .right {
+    & .right__container {
+      margin: 65px 0px 84px 0px;
+      display: flex;
+      flex-direction: row;
+      & .right__column-left {
+        display: flex;
+        flex-direction: column;
+        color: $darkblue;
+        margin-right: 40px;
+        margin-top: 5px;
+        }
+        .right__column-default button {
+          @include button($orange, $white, 40px, 113px);
+        }
+        .right__column-success button {
+          @include button($green, $white, 40px, 113px);
+        }
+        .right__column-error button {
+          @include button($red, $white, 40px, 113px);
+        }
+        .right__column-right {
+          @include spinner($orange, $white, 40px, 113px, 12px, 3px);
+        }
+        // media .right__
+        @include _800() {
+          .right__column-left {
+            margin-right: 15px;
+            margin-top: 5px;
+          }
+          .right__column-default button {
+            @include button($orange, $white, 32px, 90px);
+          }
+          .right__column-success button {
+            @include button($green, $white, 32px, 90px);
+          }
+          .right__column-error button {
+            @include button($red, $white, 32px, 90px);
+          }
+          .right__column-right {
+            padding-top: 1px;
+            @include spinner($orange, $white, 32px, 90px, 12px, 3px);
+          }
+        }
+        @include _533() {
+          .right__column-left {
+            margin-right: 15px;
+            margin-top: 6px;
+            font-size: 10px;
+          }
+          .right__column-default button {
+            @include button($orange, $white, 28px, 70px);
+          }
+          .right__column-success button {
+            @include button($green, $white, 28px, 70px);
+          }
+          .right__column-error button {
+            @include button($red, $white, 28px, 70px);
+          }
+          .right__column-right {
+            padding-top: 1px;
+            @include spinner($orange, $white, 28px, 70px, 12px, 2px);
+          }
+        }
+        @include _360() {
+          .right__column-left {
+            display: none;
+          }
+          .right__column-default button {
+            @include button($orange, $white, 25px, 80px);
+          }
+          .right__column-success button {
+            @include button($green, $white, 25px, 80px);
+          }
+          .right__column-error button {
+            @include button($red, $white, 25px, 80px);
+          }
+          .right__column-right {
+            padding-top: 0px;
+            @include spinner($orange, $white, 25px, 80px, 12px, 2px);
+          }
+        }
+      }
+      // media .right__container
+      @include _800() {
+        .right__container {
+          margin: 56px 0px 0px 0px;
+        }
+      }
+      @include _600() {
+        .right__container {
+          margin: 51px 0px 0px 0px;
+        }
+      }
+      @include _533() {
+        .right__container {
+          margin: 25px 0px 0px 0px;
+        }
+      }
+      @include _360() {
+        .right__container {
+          margin: 25px 0px 0px 0px;
+        }
+      }
+    }
+}

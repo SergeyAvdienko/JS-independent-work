@@ -89,6 +89,23 @@ module.exports = {
         exclude: /node_modules/,
         use: jsLoader(),
       },
+      // изображения
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name() {
+            // `resourcePath` - `/absolute/path/to/file.js`
+            // `resourceQuery` - `?foo=bar`
+
+            if (isDevelopment) {
+              return '[path][name].[ext]';
+            }
+
+            return '[contenthash].[ext]';
+          },
+        },
+      },
     ],
   },
 };

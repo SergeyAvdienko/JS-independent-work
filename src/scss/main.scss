@@ -1,0 +1,531 @@
+@import 'variables';
+@import 'mixins';
+
+.site__main {
+  display: flex;
+  flex-direction: row;
+  padding: 0px $distance;
+  .title-h2 {
+    display: none;
+  }
+  .top {
+    margin-top: 40px;
+  }
+  .site__main-button-close {
+    display: none;
+    position: absolute;
+    right: 44px;
+    top: 33px;
+    & button {
+      @include button($darkblue, $white, 32px, 110px);
+    }
+  }
+  .site__main-shedule-shifh-right {
+    animation: site__main-shedule-shifh-right  $time-shift-left-right ease-in-out both;
+    @keyframes site__main-shedule-shifh-right {
+        from {
+          transform: translate(0px);
+        }
+        to {
+          transform: translate(350px);
+        }
+      }
+  }
+  .site__main-shedule-shift-left {
+    animation: site__main-shedule-shift-left  $time-shift-left-right ease-in-out;
+    @keyframes site__main-shedule-shift-left {
+        from {
+          transform: translate(350px);
+        } to {
+          transform: translate(0px);
+        }
+      }
+  }
+  @include _800() {
+    padding: 0px $distance - 16px;
+    .site__main-button-close {
+      display: block;
+    }
+  }
+  @include _600() {
+    padding: 0px $distance - 35px;
+  }
+  @include _533() {
+    padding: 0px $distance - 35px;
+  }
+  @include _360() {
+    padding: 0px $distance - 45px;
+  }
+    & .site__main-schedule {
+      .title-h3 {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      @include _800() {
+        position: absolute;
+        left: -350px;
+        background-color: #ffffff;
+        padding: 0 45px;
+        border-right: 4px solid #d96941;
+        z-index: 1;
+      }
+      .site__main-select-date {
+        margin-top: 40px;
+        width: 250px;
+        & .site__main-input {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            @include input(30px, 250px, $darkblue, $darkblue);
+          }
+      }
+      .list {
+        & .list__title {
+            margin-bottom: 30px;
+          }
+          .list__ul {
+            list-style-type: none;
+            margin-top: 0px;
+            margin-bottom: 30px;
+          }
+          .list__li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            & .list__p {
+                height: 30px;
+                padding: 8px 0;
+              }
+              .list__block-confirm .list__confirm {
+                @include button($green, $white, 30px, 100px);
+              }
+              .list__block-confirm {
+                @include spinner($green, $white, 30px, 100px, 12px, 3px);
+              }
+              .list__block-closed .list__closed {
+                @include button($yellow, $darkblue, 30px, 100px);
+              }
+              .list__block-closed {
+                @include spinner($yellow, $darkblue, 30px, 100px, 12px, 3px);
+              }
+              .list__block-disabled .list__disabled {
+                @include button($beige, $darkblue, 30px, 100px);
+              }
+              .list__block-disabled {
+                @include spinner($beige, $darkblue, 30px, 100px, 12px, 3px);
+              }
+              .list__block-closed-small .list__closed-small {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include button($yellow, $darkblue, 30px, 50px);
+              }
+              .list__block-closed-small .small-spinner {
+                @include spinner-icon($yellow, $darkblue, 30px, 50px, 2.3s, 360deg, 'default');
+              }
+              .list__block-disabled-small .list__disabled-small {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include button($beige, $darkblue, 30px, 50px);
+              }
+              .list__block-disabled-small .small-spinner {
+                @include spinner-icon($beige, $darkblue, 30px, 50px, 2.3s, 15px, 'right');
+              }
+          }
+
+      }
+    }
+    & .site__main-programm {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      .site__main-menu {
+        height: $programm-menu-height;
+        width: $programm-menu-width;
+        margin: 46px 0px 0px 64px;
+      }
+      .menu {
+        & .menu__ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+          }
+          .menu__li {
+            font-size: 16px;
+            font-weight: 700;
+            margin-right: 64px;
+            cursor: pointer;
+          }
+          .menu__active {
+            color: $orange;
+            cursor: auto;
+          }
+          @include _1024() {
+            .menu__li {
+              margin-right: 25px;
+            }
+          }
+          @include _800() {
+            .menu__li {
+              margin-right: 38px;
+            }
+          }
+          @include _600() {
+            .menu__li {
+              margin-right: 26px;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+          @include _533() {
+            .menu__li {
+              margin-right: 16px;
+              font-size: 13px;
+              font-weight: 700;
+            }
+          }
+          @include _360() {
+            .menu__li {
+              margin-right: 15px;
+              font-size: 11px;
+              text-align: center;
+            }
+          }
+          @include _320() {
+            .menu__li {
+              margin-right: 10px;
+            }
+          }
+      }
+      .site__main-columns {
+        display: flex;
+        flex-direction: row;
+        & .site__main-left-column {
+            width: 154px;
+            & .site__main-download {
+                margin: 40px 0px 0px 64px;
+                & .button {
+                    @include button($orange, $white, 50px, 50px);
+                  }
+                  .small-spinner {
+                    @include spinner-icon($orange, $white, 50px, 50px, 2.3s, 15px, 'down');
+                  }
+                  @include _600() {
+                    .button {
+                      @include button($orange, $white, 40px, 40px);
+                    }
+                    .small-spinner {
+                      @include spinner-icon($orange, $white, 40px, 40px, 2.3s, 12px, 'down');
+                    }
+                  }
+                  @include _360() {
+                    .button {
+                      @include button($orange, $white, 30px, 30px);
+                    }
+                    .small-spinner {
+                      @include spinner-icon($orange, $white, 30px, 30px, 2.3s, 8px, 'down');
+                    }
+                  }
+              }
+              @include _1280() {
+                .site__main-download {
+                  margin: 40px 0px 0px 41px;
+                }
+              }
+              @include _800() {
+                .site__main-download {
+                  margin: 0px;
+                }
+              }
+              @include _600() {
+                .site__main-download {
+                  margin: 0px;
+                }
+              }
+          }
+          .site__main-right-column {
+            width: 937px;
+            .site__main-header {
+              & .info {
+                  margin: 40px 0px 16px 0px;
+                  display: flex;
+                  flex-direction: row;
+                  & p {
+                    font-weight: 700;
+                    color: $darkblue;
+                    margin-right: 20px;
+                    }
+                    @include _533() {
+                      p {
+                        margin-right: 5px;
+                      }
+                    }
+                    @include _360() {
+                      p {
+                        margin-right: 8px;
+                        font-size: 10px;
+                        & i {
+                          font-size: 15px;
+                        }
+                      }
+                    }
+                    @include _320() {
+                      p {
+                        margin-right: 6px;
+                        font-size: 10px;
+                        & i {
+                          font-size: 10px;
+                        }
+                      }
+                    }
+                }
+                @include _800() {
+                  .info {
+                    margin: 0px 0px 16px 0px;
+                  }
+                }
+                @include _360() {
+                  .info {
+                    margin: 0px 0px 15px 0px;
+                  }
+                }
+            }
+            .site__main-title {
+              margin-bottom: 40px;
+            }
+            .title-h3 {
+              font-size: 36px;
+              font-weight: 700;
+              color: $darkblue;
+            }
+            .site__main-schedule-visible {
+              display: none;
+              margin-bottom: 20px;
+               & button {
+                  display: flex; 
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  @include button($darkblue, $white, 32px, 200px);
+                  & i {
+                    margin-right: 10px;
+                  }
+                }
+            }
+            .description {
+              color: $darkblue;
+              margin-bottom: 40px;
+            }
+            .content {
+              margin-bottom: 40px;
+              border-left: 4px solid $orange;
+              & .content__title {
+                  margin: 20px 0px 15px 20px;
+                }
+                .content__ol {
+                  margin-left: 35px;
+                }
+                .content__li {
+                  font-size: 14px;
+                  color: $darkblue;
+                }
+                .content__img {
+                  margin: 20px;
+                  width: 750px;
+                }
+                @include _1024() {
+                  .content__img {
+                    margin: 15px 0px 15px 15px;
+                    width: 535px;
+                  }
+                }
+                @include _800() {
+                  .content__title {
+                    margin: 10px 0px 10px 10px;
+                  }
+                  .content__ol {
+                    margin-left: 30px;
+                  }
+                  .content__li {
+                    font-size: 12px;
+                  }
+                  .content__img {
+                    margin: 10px 0px 10px 10px;
+                    width: 420px;
+                  }
+                }
+                @include _600() {
+                  .content__img {
+                    width: 467px;
+                  }
+                }
+                @include _533() {
+                  .content__img {
+                    width: 410px;
+                  }
+                }
+                @include _360() {
+                  .content__title {
+                    margin: 10px 0px 10px 5px;
+                  }
+                  .content__ol {
+                    margin-left: 20px;
+                  }
+                  .content__li {
+                    font-size: 10px;
+                  }
+                  .content__img {
+                    width: 265px;
+                  }
+                }
+                @include _320() {
+                  .content__img {
+                    width: 244px;
+                  }
+                }
+            }
+            .title-h4 {
+              font-size: 18px;
+              font-weight: 400;
+              color: $darkblue;
+            }
+            @include _1024() {
+              .site__main-title {
+                margin-bottom: 20px;
+              }
+              .title-h3 {
+                font-size: 32px;
+              }
+              .description {
+                margin-bottom: 20px;
+              }
+            }
+            @include _800() {
+              .site__main-title {
+                margin-bottom: 20px;
+              }
+              .title-h3 {
+                font-size: 30px;
+              }
+              .site__main-schedule-visible {
+                display: block;
+              }
+              .description {
+                margin-bottom: 20px;
+              }
+              .content {
+                margin-bottom: 40px;
+              }
+              .title-h4 {
+                font-size: 16px;
+              }
+            }
+            @include _600() {
+              .site__main-title {
+                margin-bottom: 15px;
+              }
+              .title-h3 {
+                font-size: 25px;
+              }
+              .title-h4 {
+                font-size: 14px;
+              }
+            }
+            @include _533() {
+              .title-h3 {
+                font-size: 24px;
+              }
+            }
+            @include _360() {
+              .title-h4 {
+                font-size: 12px;
+              }
+            }
+            @include _320() {
+              .title-h3 {
+                font-size: 22px;
+              }
+            }
+          }
+          @include _1024() {
+            .site__main-right-column {
+              width: 584px;
+              padding-left: 30px;
+            }
+          }
+          @include _800() {
+            .site__main-left-column {
+              width: 70px;
+              padding-left: 20px;
+            }
+            .site__main-right-column {
+              width: 663px;
+              padding-left: 30px;
+            }
+          }
+          @include _533() {
+            .site__main-right-column {
+              width: 444px;
+              padding-left: 20px;
+            }
+          }
+          @include _360() {
+            .site__main-left-column {
+              width: 60px;
+              padding-left: 10px;
+            }
+            .site__main-right-column {
+              width: 310px;
+              padding-left: 10px;
+            }
+          }
+          @include _320() {
+            .site__main-right-column {
+              width: 270px;
+            }
+          }
+      }
+      @include _1280() {
+        .site__main-menu {
+          margin: 42px 0px 0px 40px;
+        }
+      }
+      @include _1024() {
+        .site__main-menu {
+          width: 635px;
+        }
+      } 
+      @include _800() {
+        .site__main-menu {
+          width: 698px;
+          margin: 34px 0px 0px 0px;
+          height: $programm-menu-height - 95px;
+        }
+      } 
+      @include _600() {
+        .site__main-menu {
+          width: 571px;
+          margin: 50px 0px 0px 10px;
+        }
+      }
+      @include _533() {
+        .site__main-menu {
+          width: 494px;
+          margin: 40px 0px 0px 15px;
+        }
+      }
+      @include _360() {
+        .site__main-menu {
+          width: 325px;
+          margin: 15px 0px 0px 12px;
+        }
+      }
+      @include _320() {
+        .site__main-menu {
+          width: 311px;
+          margin: 15px 0px 0px 0px;
+        }
+      }   
+    }
+}
