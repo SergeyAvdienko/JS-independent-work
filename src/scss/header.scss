@@ -40,6 +40,11 @@
     font-weight: 800;
     color: $darkblue;
   }
+  .title-animation {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
   & .left {
       display: flex;
       flex-direction: row;
@@ -61,6 +66,9 @@
           font-size: 16px;
           font-weight: 800;
           color: $beige;
+        }
+        .left__title-h1-container {
+          @include h1-letters();
         }
         // media .left__
         @include _800() {
@@ -141,7 +149,7 @@
         .right__column-error button {
           @include button($red, $white, 40px, 113px);
         }
-        .right__column-right {
+        .right__column-right {         
           @include spinner($orange, $white, 40px, 113px, 12px, 3px);
         }
         // media .right__

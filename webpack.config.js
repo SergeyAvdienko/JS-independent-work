@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -44,7 +45,18 @@ module.exports = {
     extensions: ['.js'],
     alias: {
       '@src': path.resolve(__dirname, 'src'),
-      '@core': path.resolve(__dirname, 'src/core'),
+      '@views': path.resolve(__dirname, 'src/applicationLayers/views'),
+      '@controllers': path.resolve(
+          __dirname,
+          'src/applicationLayers/controllers'
+      ),
+      '@services': path.resolve(__dirname, 'src/applicationLayers/services'),
+      '@repositorys': path.resolve(
+          __dirname,
+          'src/applicationLayers/repositorys'
+      ),
+      '@models': path.resolve(__dirname, 'src/applicationLayers/models'),
+      '@data': path.resolve(__dirname, 'src/applicationLayers/data'),
     },
   },
   devtool: isDevelopment ? 'source-map' : false,
@@ -72,6 +84,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: filename('css'),
+    }),
+    new webpack.ProvidePlugin({
+      // ...
     }),
   ],
   module: {
