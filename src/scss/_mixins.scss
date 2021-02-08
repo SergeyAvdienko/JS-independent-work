@@ -107,14 +107,87 @@
 
 } 
 
+@mixin h1-letters () {
+  .title-animation {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+  .title-animation > li {
+    -webkit-animation: h1-bouncedelay 0.3s ease-in;
+    animation: h1-bouncedelay 0.3s ease-in;
+  }
+  .title-animation .left__h1-1 {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+  }
+  .title-animation .left__h1-2 {
+    -webkit-animation-delay: 0.0s;
+    animation-delay: 0.0s;
+  }
+  .title-animation .left__h1-3 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+  .title-animation .left__h1-4 {
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+  }
+  .title-animation .left__h1-5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+  .title-animation .left__h1-6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+  .title-animation .left__h1-7 {
+    -webkit-animation-delay: 0.35s;
+    animation-delay: 0.35s;
+  }
+  .title-animation .left__h1-8 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+  .title-animation .left__h1-9 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+  }
+  .title-animation .left__h1-10 {
+    -webkit-animation-delay: 0.55s;
+    animation-delay: 0.55s;
+  }
+  .title-animation .left__h1-11 {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  .title-animation .left__h1-12 {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+  }
+
+  @keyframes h1-bouncedelay {
+    0%, 10% { 
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    } 60% {
+      -webkit-transform: translateY(-40%);
+      transform: translateY(-40%);
+    } 90%, 100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+
+}
+
 @mixin spinner($b, $c, $h, $w, $r, $mr) {
   .spinner {
-    position: relative;
+    display: flex;
     width: $w;
     height: $h;
     border: none;
     border-radius: 5px;
-    display: none;
     justify-content: center;
     align-items: center;
     background-color: $b;

@@ -1,0 +1,43 @@
+.animation__blur-on {
+  animation: animation__blur-on  0.5s ease-in-out both;
+  @keyframes animation__blur-on {
+    from {
+      filter: blur(0px);
+    }
+    to {
+      filter: blur(4px);
+    }
+  }
+}
+.animation__blur-off {
+  animation: animation__blur-off  0.5s ease-in-out both;
+  @keyframes animation__blur-off {
+    from {
+      filter: blur(4px);
+    }
+    to {
+      filter: blur(0px);
+    }
+  }
+}
+.animation__shifh-right {
+  animation: animation__shifh-right  0.5s ease-in-out both;
+  @keyframes animation__shifh-right {
+      from {
+        transform: translate(0px);
+      }
+      to {
+        transform: translate(350px);
+      }
+    }
+}
+.animation__shift-left {
+  animation: animation__shift-left  0.7s ease-in-out;
+  @keyframes animation__shift-left {
+      from {
+        transform: translate(350px);
+      } to {
+        transform: translate(0px);
+      }
+    }
+}

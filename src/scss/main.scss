@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins';
+@import 'animation';
 
 .site__main {
   display: flex;
@@ -19,27 +20,6 @@
     & button {
       @include button($darkblue, $white, 32px, 110px);
     }
-  }
-  .site__main-shedule-shifh-right {
-    animation: site__main-shedule-shifh-right  $time-shift-left-right ease-in-out both;
-    @keyframes site__main-shedule-shifh-right {
-        from {
-          transform: translate(0px);
-        }
-        to {
-          transform: translate(350px);
-        }
-      }
-  }
-  .site__main-shedule-shift-left {
-    animation: site__main-shedule-shift-left  $time-shift-left-right ease-in-out;
-    @keyframes site__main-shedule-shift-left {
-        from {
-          transform: translate(350px);
-        } to {
-          transform: translate(0px);
-        }
-      }
   }
   @include _800() {
     padding: 0px $distance - 16px;

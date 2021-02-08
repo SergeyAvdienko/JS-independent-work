@@ -18,14 +18,16 @@
 
         <div class="left">
 
-          <div class="left__img logo-css">
+          <div class="left__img logo-css" id="buttonLogotype">
             <div class="logo-css__circle">
               <div class="logo-css__letter">Y</div>
             </div>
           </div>
 
           <div class="left__title">
-            <h1 class="left__h1 title-h1">YourHabit.ru</h1>
+            <div class="left__title-h1-container">
+              <h1 class="left__h1 title-h1">YourHabit.ru</h1>
+            </div>
             <p class="left__subtitle">#Продажи #Обучение #Общение с клиентом</p>
           </div>
 
@@ -33,19 +35,14 @@
 
         <div class="right">
 
-          <div class="right__container">
+          <div class="right__container" id="test">
             <div class="right__column-left" id="userInfo">
-              <p>Войдите на сайт</p>
-              <p>используя сервис Google</p>
+              <p class="p1">Войдите на сайт</p>
+              <p class="p2">используя сервис Google</p>
             </div>
             <div class="right__column-right">
               <div class="right__column-default">
-                <button id="data-login">Войти</button>
-              </div>
-              <div class="spinner">
-                <div class="bounce1"></div>
-                <div class="bounce2"></div>
-                <div class="bounce3"></div>
+                <button id="buttonLogin">Войти</button>
               </div>
             </div>
           </div>
@@ -56,7 +53,7 @@
 
       <div class="site__main">
 
-        <section class="site__main-schedule" data-state-shedule="false">
+        <section class="site__main-schedule">
 
           <h2 class="title-h2">Расписание</h2>
 
@@ -85,11 +82,6 @@
                 <p class="list__p">08:00 - 09:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -97,11 +89,6 @@
                 <p class="list__p">09:00 - 10:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -109,11 +96,6 @@
                 <p class="list__p">10:00 - 11:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -121,11 +103,6 @@
                 <p class="list__p">11:00 - 12:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -133,11 +110,6 @@
                 <p class="list__p">12:00 - 13:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -145,11 +117,6 @@
                 <p class="list__p">13:00 - 14:00</p>
                 <div class="list__block-disabled">
                   <button class="list__disabled">Занято</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -157,11 +124,6 @@
                 <p class="list__p">14:00 - 15:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -169,11 +131,6 @@
                 <p class="list__p">15:00 - 16:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -181,11 +138,6 @@
                 <p class="list__p">16:00 - 17:00</p>
                 <div class="list__block-closed">
                   <button class="list__closed">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -193,11 +145,6 @@
                 <p class="list__p">17:00 - 18:00</p>
                 <div class="list__block-confirm">
                   <button class="list__confirm">Записаться</button>
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
                 </div>
               </li>
 
@@ -250,11 +197,11 @@
           <div class="site__main-menu menu">
 
             <ul class="menu__ul">
-              <li class="menu__li menu__active"> Программа </li>
-              <li class="menu__li"> Занятие 1-2 </li>
-              <li class="menu__li"> Занятие 3-4 </li>
-              <li class="menu__li"> Занятие 5-6 </li>
-              <li class="menu__li"> Занятие 7-8 </li>
+              <li class="menu__li menu__active">Программа</li>
+              <li class="menu__li">Занятие 1-2</li>
+              <li class="menu__li">Занятие 3-4</li>
+              <li class="menu__li">Занятие 5-6</li>
+              <li class="menu__li">Занятие 7-8</li>
             </ul>
 
           </div>
@@ -367,12 +314,7 @@
             </ul>
           </div>
           <div class="site__report-button">
-            <button class="button">Выполненно</button>
-            <div class="spinner">
-              <div class="bounce1"></div>
-              <div class="bounce2"></div>
-              <div class="bounce3"></div>
-            </div>
+            <button class="button" id="elem">Выполненно</button>
           </div>
         </div>
 
