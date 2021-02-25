@@ -1,0 +1,225 @@
+@import 'variables';
+@import 'mixins';
+
+
+.site__manual {
+  background-color: $white;
+  padding: 45px 50px 50px 50px;
+  line-height: 1.6em;
+  .title-h2 {
+    padding: 10px 0px;
+    font-size: 20px;
+  }
+  .title-h2.top {
+    margin-top: 40px;
+  }
+  .title-h3 {
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .site__manual-columns {
+    display: flex;
+    flex-direction: row;
+    .hover {
+      cursor: pointer;
+      &:hover {
+        background-color: $greyligth;
+        border-radius: 5px;
+      }
+    }
+    .active {
+      background-color: $greyligth;
+      border-radius: 5px;
+      border-bottom: 1px solid $grey;
+    }
+    & .site__manual-column-left {
+        overflow: auto;
+        flex: 1;
+        font-size: 15px;
+        padding-right: 40px;
+        & .site__manual-column-left-ul {
+          margin-top: 20px;
+          list-style: none;
+          animation: animation-site__manual  0.3s ease-in-out 1;
+          & .site__manual-column-left-li {
+            align-content: center;
+            display: grid;
+            padding: 5px 10px;
+             & p {
+                display: flex;
+                justify-content: space-between;
+                & i {
+                  margin-right: 20px;
+                  font-size: 30px;
+                }
+              }
+              .site__manual-column-left-li-string {
+                font-size: 16px;
+                padding: 15px 5px 5px 5px;
+              }
+              .site__manual-column-left-li-list {
+                font-size: 14px;
+                list-style: none;
+                padding-left: 5px;
+                & .site__manual-column-left-li-list-item {
+                  padding: 10px 10px;
+                }
+              }
+          }
+        }
+      }
+      .site__manual-column-right {
+        flex: 3;
+        padding-left: 20px;
+        border-left: 4px solid $greyligth;
+        @include _600() {
+          padding-left: 0px;
+          border-left: 0px solid $greyligth;
+        }
+        & .site__manual-column-right-title {
+            display: flex;
+            justify-content: space-between;
+            & .site__manual-column-right-title-button {
+              display: flex;
+              align-items: center;
+              & button.button-menu {
+                  margin-right: 5px;
+                  display: none;
+                  @include button($darkblue, $white, 40px, 113px);
+                }
+                button.button-back {
+                  @include button($darkblue, $white, 40px, 113px);
+                }
+                @include _600() {
+                  button.button-menu {
+                    width: 85px;
+                    height: 25px;
+                    display: block;
+                  }
+                  button.button-back {
+                    width: 85px;
+                    height: 25px;
+                  }
+                }
+            }
+          }
+          .site__manual-column-right-subtitle {
+            margin: 30px 0 30px 0;
+            border-bottom: 1px solid $orange;
+            color: $orange;
+          }
+          .site__manual-column-right-string {
+            margin: 10px 0;
+            font-size: 16px;
+            animation: animation-site__manual 0.3s ease-in-out 1;
+          }
+          .site__manual-column-right-string.top {
+            margin-top: 30px;
+          }
+          .site__manual-column-right-button button{
+            margin: 20px 0;
+            @include button($beige, $darkblue, 32px, 300px);
+          }
+          .site__manual-column-right-form-container {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            & .form-container {
+              display: flex;
+              flex-direction: row;
+              & .form-container__left-column {
+                  margin: 0px 10px 0px 0px;
+                  padding-top: 5px; 
+                  color: $darkblue;
+                  & span.error {
+                      color: $red;
+                    }
+                    span.success {
+                      color: $green;
+                    }
+                }
+                .form-container__right-column input {
+                  @include input(30px, 250px, $darkblue, $darkblue);
+                }
+                input.error {
+                  border-color: $red;
+                  color: $red;
+                }
+                input.error:focus {
+                  border: 2px solid $red;
+                }
+                input.success {
+                  border-color: $green;
+                  color: $green;
+                }
+                input.success:focus {
+                  border: 2px solid $green;
+                }
+                .form-container__button {
+                  margin-left: 10px;
+                  @include spinner($green, $white, 30px, 90px, 12px, 3px);
+                  & .form-container__button-default button {
+                    @include button($green, $white, 30px, 90px);
+                  }
+                }
+                @include _600() {
+                  display: flex;
+                  flex-direction: column;
+                  & .form-container__left-column {
+                    margin: 0px 10px 10px 0px;
+                    }
+                    .form-container__button {
+                      margin: 15px 0 0 0;
+                    }
+                }
+            }
+            @include _600() {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          @include _600() {
+            .site__manual-column-right-subtitle {
+              margin: 10px 0 20px 0;
+            }
+            .site__manual-column-right-string {
+              margin: 10px 0;
+              font-size: 14px;
+            }
+            .site__manual-column-right-button button {
+              width: 100%;
+            }
+          }
+      }
+  }
+  @keyframes animation-site__manual {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @include _600() {
+    .title-h2 {
+      font-size: 16px;
+    }
+    .title-h3 {
+      font-size: 14px;
+    }
+    padding: 20px 10px;
+    .site__manual-column-left {
+      display: none;
+    }
+    .site__manual-column-left.visible {
+      display: flex;
+      flex-direction: column;
+      background-color: $white;
+      & .site__manual-column-left-ul {
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

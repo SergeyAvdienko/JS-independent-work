@@ -9,12 +9,15 @@ const initKeyValue = {
     throw Error('Тип тега String');
   },
   propsInit(container = []) {
-    if (Array.isArray(container)) return Object.assign({}, ...container);
-    throw Error('Тип свойства Array[{}, {} ...]');
+    if (!Array.isArray(container)) {
+      // console.log('Свойство props было принудительно обернуто в []');
+      container = [container];
+    }
+    return Object.assign({}, ...container);
   },
   childrenInit(container = 'Пустой элемент передайте массив') {
-    if (Array.isArray(container)) return container;
     if (typeof container === 'string') return container;
+    if (Array.isArray(container)) return container;
     throw Error(
         'Если ваш Chidren элемента VDOM/DOM не имеет дочерних элементов []' +
         ', то должен быть текстом'

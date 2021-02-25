@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'mixins';
+
 .animation__blur-on {
   animation: animation__blur-on  0.5s ease-in-out both;
   @keyframes animation__blur-on {
@@ -41,3 +44,61 @@
       }
     }
 }
+@include _800() {
+  .site__main-schedule.visible {
+    animation: site__main-schedule-visible 0.2s ease-out both 1;
+    @keyframes site__main-schedule-visible {
+      from { 
+        transform: translateX(0px);
+        opactity: 0;
+      } to { 
+        transform: translateX(350px);
+        opactity: 1;
+        width: 100%;
+      }
+    }      
+  }
+}
+
+.content__block-visual-display-container-item-first.circle {
+  animation: visual-display-container-item-first-circle 10s linear infinite;
+    @keyframes visual-display-container-item-first-circle { 
+      100% { transform: rotateZ(360deg); }
+  }
+}
+
+.content__block-lesson-header-left-first.circle {
+  animation: visual-header-container-item-first-circle 10s linear infinite;
+    @keyframes visual-header-container-item-first-circle { 
+      100% { transform: rotateZ(360deg); }
+  }
+}
+
+.content__block-visual-display-container > div {
+  -webkit-animation: content__block-visual-display-container-item 0.2s ease-in;
+  animation: content__block-visual-display-container-item 0.2s ease-in;
+
+  @keyframes content__block-visual-display-container-item { 
+    0% { 
+      transform: scale(1);
+    } 50% {
+      transform: scale(1.1);
+    } 100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.content__block-lesson-container {
+  animation: content__block-lesson-container-animation 0.5s ease-in both;
+  @keyframes content__block-lesson-container-animation {
+    from { 
+      opacity: 0;
+      transform: translateY(-50px);
+    } to { 
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  } 
+}
+

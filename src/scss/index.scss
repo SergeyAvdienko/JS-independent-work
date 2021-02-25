@@ -5,6 +5,8 @@
 @import 'main';
 @import 'report';
 @import 'footer';
+@import 'manual';
+@import 'popup';
 
 @import 'variables';
 
@@ -17,6 +19,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: $beige;
+  overflow-x: hidden;
 }
 
 .app-container {
@@ -64,4 +67,8 @@ body {
   @include _320() {
     width: $app-width-1440 - ($app-width-1440 - 320px);
   }
+}
+
+.invisibile {
+  display: none;
 }

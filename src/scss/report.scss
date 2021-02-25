@@ -2,6 +2,7 @@
 @import 'mixins';
 
 .site__report {
+  margin-top: 50px;
   padding: 0 $distance;
   .title-h3 {
     font-size: 36px;
@@ -119,6 +120,7 @@
   .line {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 
     & .line__progress {
       display: flex;

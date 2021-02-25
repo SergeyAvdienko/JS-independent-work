@@ -6,20 +6,19 @@ export class VDOMFilter {
     this.ID = uniqID;
     this.vnode = undefined;
   }
-  // Принимаю объект и проверяю его uniqID
-  start() {
-    if (Number(this.ID) === Number(this.DOM.id)) return this.DOM;
-    this.filter(this.DOM.children);
-  }
-  filter(arrayChidren) {
+  _filter(arrayChidren) {
     for (let index = 0; index < arrayChidren.length; index++) {
       const node = arrayChidren[index];
       if (Number(node.id) === Number(this.ID)) {
         this.vnode = node;
       } else {
-        if (typeof node.children !== 'string') this.filter(node.children);
+        if (typeof node.children !== 'string') this._filter(node.children);
       }
     }
+  }
+  start() {
+    if (Number(this.ID) === Number(this.DOM.id)) return this.DOM;
+    this._filter(this.DOM.children);
   }
   result() {
     return Object.assign({}, this.vnode);

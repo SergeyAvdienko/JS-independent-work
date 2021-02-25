@@ -18,7 +18,7 @@
     right: 44px;
     top: 33px;
     & button {
-      @include button($darkblue, $white, 32px, 110px);
+      @include button($darkblue, $white, 30px, 70px);
     }
   }
   @include _800() {
@@ -50,7 +50,7 @@
         z-index: 1;
       }
       .site__main-select-date {
-        margin-top: 40px;
+        margin-top: 48px;
         width: 250px;
         & .site__main-input {
             margin-top: 30px;
@@ -89,10 +89,10 @@
                 @include spinner($yellow, $darkblue, 30px, 100px, 12px, 3px);
               }
               .list__block-disabled .list__disabled {
-                @include button($beige, $darkblue, 30px, 100px);
+                @include button($red, $white, 30px, 100px);
               }
               .list__block-disabled {
-                @include spinner($beige, $darkblue, 30px, 100px, 12px, 3px);
+                @include spinner($red, $white, 30px, 100px, 12px, 3px);
               }
               .list__block-closed-small .list__closed-small {
                 display: flex;
@@ -279,6 +279,25 @@
               font-weight: 700;
               color: $darkblue;
             }
+            .title-h4 {
+              font-size: 18px;
+              font-weight: 400;
+              color: $darkblue;
+
+            }
+            .title-h4.top {
+              margin-top: 20px;
+            }
+            .title-h5 {
+              font-size: 20px;
+              font-weight: 700;
+              color: $darkblue;
+              margin: 25px 0;
+            }
+            .title-h5.top {
+              margin-top: 40px;
+              margin-bottom: 10px;
+            }
             .site__main-schedule-visible {
               display: none;
               margin-bottom: 20px;
@@ -293,10 +312,6 @@
                   }
                 }
             }
-            .description {
-              color: $darkblue;
-              margin-bottom: 40px;
-            }
             .content {
               margin-bottom: 40px;
               border-left: 4px solid $orange;
@@ -310,14 +325,371 @@
                   font-size: 14px;
                   color: $darkblue;
                 }
-                .content__img {
+                .content__block {
                   margin: 20px;
-                  width: 750px;
+                  & .content__block-visual-display-container {
+                      display: flex;
+                      flex-direction: row;
+                      & .content__block-visual-display-container-item {
+                          flex: 1;
+                          & .content__block-visual-display-container-item-first {
+                              width: 80px;
+                              height: 80px;
+                              background-color: $greyligth;
+                              border-radius: 50%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              & .content__block-visual-display-container-item-second {
+                                  width: 65px;
+                                  height: 65px;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  cursor: pointer;
+                                  & .content__block-visual-display-container-item-icon {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: $white;
+                                    & .number {
+                                      font-size: 40px;
+                                      font-weight: 800;
+                                      }
+                                  }
+                                }
+                                .content__block-visual-display-container-item-second.error {
+                                  background-color: $red;
+                                }
+                                .content__block-visual-display-container-item-second.success {
+                                  background-color: $green;
+                                }
+                                .content__block-visual-display-container-item-second.warning {
+                                  background-color: $yellow;
+                                }
+
+                            }
+                            .content__block-visual-display-container-item-first.circle {
+                              background-clip: content-box;
+                              background-color: $greyligth;
+                              border: 2.5px dashed $grey;
+                              & .content__block-visual-display-container-item-icon  {
+                                  color: $greyligth;
+                                }
+                            }
+                            @include _1024() {
+                              .content__block-visual-display-container-item-first {
+                                width: 65px;
+                                height: 65px;
+                                & .content__block-visual-display-container-item-second {
+                                  width: 55px;
+                                  height: 55px;
+                                }
+                              }
+                            }
+                            @include _600() {
+                              .content__block-visual-display-container-item-first {
+                                width: 55px;
+                                height: 55px;
+                                & .content__block-visual-display-container-item-second {
+                                  width: 47px;
+                                  height: 47px;
+                                  & .content__block-visual-display-container-item-icon {
+                                    & .number {
+                                      font-size: 30px;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            @include _360() {
+                              .content__block-visual-display-container-item-first {
+                                width: 30px;
+                                height: 30px;
+                                & .content__block-visual-display-container-item-second {
+                                  width: 25px;
+                                  height: 25px;
+                                  & .content__block-visual-display-container-item-icon {
+                                    & .number {
+                                      font-size: 14px;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                        }
+                    }
+                    .content__block-visual-display-description {
+                      margin-top: 30px;
+                      display: flex;
+                      flex-direction: column;
+                      & .content__block-visual-display-description-item {
+                          display: flex;
+                          flex-direction: row;
+                          align-items: center;
+                          margin-bottom: 10px;
+                          & .content__block-visual-display-description-item-circle {
+                              width: 20px;
+                              height: 20px;
+                              border-radius: 50%;
+                              margin-right: 10px;
+                            }
+                            .content__block-visual-display-description-item-circle.error {
+                              background-color: $red;
+                            }
+                            .content__block-visual-display-description-item-circle.warning {
+                              background-color: $yellow;
+                            }
+                            .content__block-visual-display-description-item-circle.success {
+                              background-color: $green;
+                            }
+                        }
+                      @include _600() {
+                        .content__block-visual-display-description-item {
+                          margin-bottom: 5px;
+                        }
+                      }
+                    }
+                    .content__block-helper-setting {
+                      & .content__block-helper-settings-container{
+                        & .content__block-helper-settings {
+                          border-radius: 5px;
+                          padding: 10px;
+                          display: flex;
+                          flex-direction: row;
+                          align-items: center;
+                          justify-content: space-between;
+                          margin-bottom: 10px;
+                          & .content__block-helper-settings-right-column {
+                              display: flex;
+                              flex-direction: row;
+                              align-items: center;
+                              margin-left: 10px;
+                              & span {
+                                  border: 1px solid $beige;
+                                  color: $darkblue;
+                                  border-radius: 20px;
+                                  padding: 5px 10px;
+                                  margin-right: 5px;
+                                  cursor: pointer;
+                                }
+                                i {
+                                  font-size: 30px;
+                                }
+                                i.click {
+                                  cursor: pointer;
+                                }
+                                i.success {
+                                  border: 0px solid $beige;
+                                }
+                                i.error {
+                                  border: 0px solid $beige;
+                                }
+                                i.default {
+                                  color: $grey;
+                                }
+                                .success {
+                                  border: 1px solid $green;
+                                  color: $green;
+                                  margin-right: 5px;
+                                }
+                                .default {
+                                  color: $grey;
+                                }
+                                .error {
+                                  border: 1px solid $red;
+                                  color: $red;
+                                }
+                                @include _320 {
+                                  i {
+                                    font-size: 20px;
+                                  }
+                                  span {
+                                    font-size: 10px;
+                                  }
+                                }
+                            }
+                            .top {
+                              margin-top: 10px;
+                            }
+                            @include _320() {
+                              .content__block-helper-settings-right-column {
+                                padding-right: 5px;
+                              }
+                            }
+                          }
+                          .content__block-helper-settings.error {
+                            background-color: $redligth;
+                            & span {
+                              color: $red;
+                            }
+                          }
+                          .content__block-helper-settings.success {
+                            background-color: $greenligth;
+                            color: $darkblue;
+                          }
+                          .content__block-helper-settings.default {
+                            background-color: $greyligth;
+                            color: $darkblue;
+                          }
+                      }
+                    }
+                    .content__block-lesson-container {  
+                      .content__block-lesson-container-header {
+                        display: flex;
+                        justify-content: space-between;
+                          & .content__block-lesson-header-left {
+                            & .content__block-lesson-header-left-first {
+                              width: 80px;
+                              height: 80px;
+                              background-color: $greyligth;
+                              border-radius: 50%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                                & .content__block-lesson-header-left-second {
+                                    width: 70px;
+                                    height: 70px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                      & .number {
+                                          font-size: 40px;
+                                          font-weight: 800;
+                                          color: $white;
+                                          cursor: pointer;
+                                        }
+                                  }
+                                  .content__block-lesson-header-left-second.error {
+                                    background-color: $red;
+                                  }
+                                  .content__block-lesson-header-left-second.success {
+                                    background-color: $green;
+                                  }
+                                  .content__block-lesson-header-left-second.warning {
+                                    background-color: $yellow;
+                                  }
+                              }
+                              .content__block-lesson-header-left-first.circle {
+                                background-clip: content-box;
+                                background-color: $greyligth;
+                                border: 2.5px dashed $grey;
+                              }
+                              .content__block-lesson-header-left-second.default {
+                                & .number {
+                                    color: $greyligth;
+                                  }
+                              }
+                          }
+                          .content__block-lesson-header-right {
+                            padding-top: 26px;
+                            & .content__block-lesson-header-right-first-button {
+                                margin-right: 15px;
+                                & .material-icons {
+                                    font-size: 30px;
+                                    font-weight: 800;
+                                    cursor: pointer;
+                                  }
+                              }
+                              .content__block-lesson-header-right-second-button {
+                                margin-right: 15px;
+                                & .material-icons {
+                                  font-size: 30px;
+                                  font-weight: 800;
+                                  cursor: pointer;
+                                }
+                              }
+                          }
+                      }
+                      .content__block-lesson-container-body {
+                        & .content__block-lesson-container-body-alert {
+                            margin-top: 20px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                              & .content__block-lesson-container-body-alert-span-right {
+                                  border-radius: 25px;
+                                  padding: 5px 10px;
+                                  cursor: pointer;
+                                }
+                                .content__block-lesson-container-body-alert-span-right.error {
+                                  border: 1px solid $red;
+                                  color: $red;
+                                }
+                                .content__block-lesson-container-body-alert-span-right.success {
+                                  border: 1px solid $green;
+                                  color: $green;
+                                }
+                                .content__block-lesson-container-body-alert-span-right.warning {
+                                  border: 1px solid $yellow;
+                                  color: $yellow;
+                                }
+                                .content__block-lesson-container-body-alert-span-right.default {
+                                  display: none;
+                                }
+                          }
+                          .content__block-lesson-container-body-alert.error {
+                            background-color: $redligth;
+                          }
+                          .content__block-lesson-container-body-alert.warning {
+                            background-color: $yellowligth;
+                          }
+                          .content__block-lesson-container-body-alert.success {
+                            background-color: $greenligth;
+                          }
+                          .content__block-lesson-container-body-alert.default {
+                            height: 48px;
+                            background-color: $greyligth;
+                          }
+                      }
+                      .content__block-lesson-container-footer {
+                        margin: 20px 0px 20px 10px;
+                        & .content__block-lesson-container-footer-h5-first {
+                            padding: 5px 10px;
+                            border-radius: 20px;
+                            background-color: $greyligth;
+                            color: $darkblue;
+                            width: 150px;
+                            text-align: center;
+                          }
+                          .content__block-lesson-container-footer-h5-second {
+                            margin-top: 20px;
+                            padding: 5px 10px;
+                            border-radius: 20px;
+                            background-color: $greyligth;
+                            color: $darkblue;
+                            width: 200px;
+                            text-align: center;
+                          }
+                          .content__block-lesson-container-footer-ol {
+                            padding-left: 10px;
+                            margin-top: 15px;
+                            line-height: 1.6rem;
+                            & .content__block-lesson-container-footer-ol-li {
+                              margin: 10px 0;
+                            }
+                          }
+                      }
+                    }
+                    @include _800() {
+                      .content__block-visual-display-description {
+                        margin-top: 20px;
+                      }
+                    }
+                    @include _600() {
+                      .content__block-visual-display-description {
+                        margin-top: 10px;
+                        margin-left: 5px;
+                      }
+                    }
                 }
                 @include _1024() {
-                  .content__img {
+                  .content__block {
                     margin: 15px 0px 15px 15px;
-                    width: 535px;
                   }
                 }
                 @include _800() {
@@ -330,19 +702,8 @@
                   .content__li {
                     font-size: 12px;
                   }
-                  .content__img {
+                  .content__block {
                     margin: 10px 0px 10px 10px;
-                    width: 420px;
-                  }
-                }
-                @include _600() {
-                  .content__img {
-                    width: 467px;
-                  }
-                }
-                @include _533() {
-                  .content__img {
-                    width: 410px;
                   }
                 }
                 @include _360() {
@@ -355,20 +716,7 @@
                   .content__li {
                     font-size: 10px;
                   }
-                  .content__img {
-                    width: 265px;
-                  }
                 }
-                @include _320() {
-                  .content__img {
-                    width: 244px;
-                  }
-                }
-            }
-            .title-h4 {
-              font-size: 18px;
-              font-weight: 400;
-              color: $darkblue;
             }
             @include _1024() {
               .site__main-title {
@@ -376,9 +724,6 @@
               }
               .title-h3 {
                 font-size: 32px;
-              }
-              .description {
-                margin-bottom: 20px;
               }
             }
             @include _800() {
@@ -390,9 +735,6 @@
               }
               .site__main-schedule-visible {
                 display: block;
-              }
-              .description {
-                margin-bottom: 20px;
               }
               .content {
                 margin-bottom: 40px;
@@ -411,6 +753,10 @@
               .title-h4 {
                 font-size: 14px;
               }
+              .title-h5 {
+                font-size: 18px;
+                margin: 20px 0;
+              }
             }
             @include _533() {
               .title-h3 {
@@ -420,6 +766,10 @@
             @include _360() {
               .title-h4 {
                 font-size: 12px;
+              }
+              .title-h5 {
+                font-size: 14px;
+                margin: 15px 0;
               }
             }
             @include _320() {
@@ -507,5 +857,10 @@
           margin: 15px 0px 0px 0px;
         }
       }   
+    }
+    @include _800() {
+      .site__main-programm.invisible {
+        display: none;
+      }
     }
 }

@@ -65,13 +65,18 @@ export class VDOMRender {
 function createElement(node) {
   if (typeof node === 'string') {
     return document.createTextNode(node);
+  } else if (typeof node.children === 'string') {
+    return document.createTextNode(node.children);
   }
+  // console.log(node);
   const $el = document.createElement(node.tag);
   if (node.props) {
     Object.keys(node.props).forEach((prop) => {
       $el.setAttribute(`${prop}`, node.props[`${prop}`]);
     });
   }
+  // console.log(node);
+  // console.log(node.children);
   node.children
       .map(createElement)
       .forEach($el.appendChild.bind($el));

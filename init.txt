@@ -52,3 +52,25 @@ npm install normalize.css
 // 533
 // 360
 // 320
+
+// disableHostCheck: true
+
+// Вырезал элемент из первоначальной верстки
+
+<li class="list__li">
+  <p class="list__p">
+    <span>16:00 - 17:00</span>
+      <span>31.12.2021</span>
+  </p>
+  <div class="list__block-disabled-small">
+    <button class="list__disabled-small">
+      <i class="material-icons">shopping_cart</i>
+    </button>
+    <div class="list__spinner-disabled small-spinner">
+      <i class="material-icons">shopping_cart</i>
+    </div>
+  </div>
+</li>
+
+document.getElementById('intro__section-2').scrollIntoView(true, {behavior: 'smooth', block: 'start'})
+

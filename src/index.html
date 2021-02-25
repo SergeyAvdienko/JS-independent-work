@@ -33,7 +33,7 @@
 
         </div>
 
-        <div class="right">
+        <div class="right" id="app-test">
 
           <div class="right__container" id="test">
             <div class="right__column-left" id="userInfo">
@@ -51,140 +51,35 @@
 
       </header>
 
-      <div class="site__main">
+      <section class="site__main">
 
         <section class="site__main-schedule">
 
           <h2 class="title-h2">Расписание</h2>
 
           <div class="site__main-button-close">
-            <button id="data-close-shedule">Закрыть меню</button>
+            <button id="buttonClosedShedule">Закрыть</button>
           </div>
 
           <div class="site__main-select-date">
 
             <h3 class="title-h3"> Выбрать день: </h3>
 
-            <input class="site__main-input" type="date">
+            <input class="site__main-input" type="date" id="inputSelectedDate">
 
           </div>
 
           <div class="site__main-list list">
 
-            <h3 class="list__title title-h3">
+            <h3 class="list__title title-h3 list__title-span">
               Расписание на
-              <span> 31.01.2021 </span>
+              <span id="today-span"> 31.01.2021 </span>
             </h3>
 
-            <ul class="list__ul">
-
-              <li class="list__li">
-                <p class="list__p">08:00 - 09:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">09:00 - 10:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">10:00 - 11:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">11:00 - 12:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">12:00 - 13:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">13:00 - 14:00</p>
-                <div class="list__block-disabled">
-                  <button class="list__disabled">Занято</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">14:00 - 15:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">15:00 - 16:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">16:00 - 17:00</p>
-                <div class="list__block-closed">
-                  <button class="list__closed">Записаться</button>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">17:00 - 18:00</p>
-                <div class="list__block-confirm">
-                  <button class="list__confirm">Записаться</button>
-                </div>
-              </li>
-
-            </ul>
-
-            <h3 class="list__title top title-h3"> Моё расписание </h3>
-
-            <ul class="list__ul">
-
-              <li class="list__li">
-                <p class="list__p">
-                  <span>16:00 - 17:00</span>
-                  <span>31.12.2021</span>
-                </p>
-                <div class="list__block-closed-small">
-                  <button class="list__closed-small">
-                    <i class="material-icons">close</i>
-                  </button>
-                  <div class="list__spinner-closed small-spinner">
-                    <i class="material-icons">close</i>
-                  </div>
-                </div>
-              </li>
-
-              <li class="list__li">
-                <p class="list__p">
-                  <span>16:00 - 17:00</span>
-                  <span>31.12.2021</span>
-                </p>
-                <div class="list__block-disabled-small">
-                  <button class="list__disabled-small">
-                    <i class="material-icons">shopping_cart</i>
-                  </button>
-                  <div class="list__spinner-disabled small-spinner">
-                    <i class="material-icons">shopping_cart</i>
-                  </div>
-                </div>
-              </li>
-
-            </ul>
+            <article class="list__ul-container">
+              <ul class="list__ul">
+              </ul>
+            </article>
 
           </div>
 
@@ -197,11 +92,9 @@
           <div class="site__main-menu menu">
 
             <ul class="menu__ul">
-              <li class="menu__li menu__active">Программа</li>
-              <li class="menu__li">Занятие 1-2</li>
-              <li class="menu__li">Занятие 3-4</li>
-              <li class="menu__li">Занятие 5-6</li>
-              <li class="menu__li">Занятие 7-8</li>
+              <li class="menu__li menu__active" id="buttonAllProgramm">Программа</li>
+              <li class="menu__li" id="buttonManual">Описание занятий</li>
+              <li class="menu__li" id="buttonDocs">Техническая документация</li>
             </ul>
 
           </div>
@@ -211,11 +104,10 @@
             <div class="site__main-left-column">
 
               <div class="site__main-download">
-                <button class="button">
-                  <i class="material-icons">file_download</i>
-                </button>
-                <div class="small-spinner">
-                  <i class="material-icons">file_download</i>
+                <div class="site__main-download-default">
+                  <button class="button" id="buttonFileDownload">
+                    <i class="material-icons">picture_as_pdf</i>
+                  </button>
                 </div>
               </div>
 
@@ -227,25 +119,17 @@
 
                 <div class="info">
                   <p><i class="material-icons">shopping_cart</i></p>
-                  <p> Стоимость занятия: 1000 <small> рублей </small> </p>
+                  <p> Занятие: 1400 <small> рублей </small> </p>
                   <p><i class="material-icons">feedback</i></p>
-                  <p> 12 <small> отзывы </small> </p>
+                  <p> Oтзывы: <span> 12 </span> </p>
                 </div>
 
               </div>
 
               <h3 class="site__main-title title-h3">8 занятий обучения продажам</h3>
 
-              <p class="description">
-                Программа спланирована опытными тренерами по продажам и включает в себя практические упражнения для
-                развития
-                навыков продаж. От аналитики sales-процесса и его отражения в CRM, до выстраивания долговременных
-                отношений
-                с клиентом.
-              </p>
-
               <div class="site__main-schedule-visible">
-                <button id="data-open-shedule">
+                <button id="buttonOpenSchedule">
                   <i class="material-icons">create</i>
                   <span>Записаться на занятие</span>
                 </button>
@@ -253,73 +137,102 @@
 
               <div class="content">
 
-                <h4 class="content__title title-h4">Основные цели программы:</h4>
+                <div class="content__block">
 
-                <ol class="content__ol">
-                  <li class="content__li">Научить основным принципам работы с CRM-системой</li>
-                  <li class="content__li">Научить работе с Sales-процессом</li>
-                  <li class="content__li">Научить эффективной коммуникации с клиентом</li>
-                </ol>
+                  <!-- Ваш прогресс -->
+                  <h3 class="title-h5 content__block-title-h5">Ваш прогресс</h3>
 
-                <h4 class="content__title title-h4">Блок-схема программы:</h4>
+                  <article class="content__block-visual-display">
+                    <div class="content__block-visual-display-container">
+                    </div>
+                    <div class="content__block-visual-display-description">
+                      <div class="content__block-visual-display-description-item">
+                        <div class="content__block-visual-display-description-item-circle success"></div>
+                        <p class="content__block-visual-display-description-item-title">
+                          Пройдено
+                        </p>
+                      </div>
+                      <div class="content__block-visual-display-description-item">
+                        <div class="content__block-visual-display-description-item-circle warning"></div>
+                        <p class="content__block-visual-display-description-item-title">
+                          Вы записаны
+                        </p>
+                      </div>
+                      <div class="content__block-visual-display-description-item">
+                        <div class="content__block-visual-display-description-item-circle error"></div>
+                        <p class="content__block-visual-display-description-item-title">
+                          Не пройдено
+                        </p>
+                      </div>
+                    </div>
+                  </article>
 
-                <img class="content__img" src="plan.gif" alt="Блок-схема программы">
+                  <!-- Базовые настройки -->
+                  <h3 class="title-h5 content__block-title-h5">Базовые настройки</h3>
 
+                  <article class="content__block-helper-setting">
+                    <div class="content__block-helper-settings-container">
+                    </div>
+                  </article>
+
+                  <article class="content__block-lesson">
+                    <div class="content__block-lesson-container">
+                    </div>
+                  </article>
+
+                </div>
               </div>
 
             </div>
-
           </div>
-
         </section>
 
-      </div>
-
+      </section>
       <section class="site__report">
 
-        <h3 class="site__report-title title-h3">Отчет о выполнении практических заданий</h3>
+        <h3 class="site__report-title title-h3">Трекер практических заданий</h3>
 
-        <p class="site__report-description">В процессе курса вам предстоит выполнять практические задания, которые мы
-          будем отслеживать и обсуждать на
-          занятиях. Так как все задания являются неотъемлемой частью профессиональной ддеятельности продавца, то мы
-          должны закрепить их не просто на уровне устойчивого навыка, а на уровне привычки. Мы считаем, что лучшим
-          способом в такой ситуации является опыт применения специального трекера. Именно этот трекер вы видите ниже.
-          Наполнение трекера происходит постепенно силами тренера, а заполняется обучаемым.</p>
+        <p class="site__report-description">В процессе обучения вам предстоит выполнять практические задания, которые
+          будут отслеживаться. Задания всегда являются индивидуальными и выдаются тренером на практических кейсах по
+          наработке навыков.</p>
 
-        <div class="site__report-progress line">
-          <div class="line__progress">
-            <label class="line__label">Работа с CRM-системой</label>
-            <ul class="line__ul">
-              <li class="line__li line__success"></li>
-              <li class="line__li line__danger"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-              <li class="line__li line__default"></li>
-            </ul>
+        <article class="site__report-progress">
+          <div class="site__report-progress-container">
+
           </div>
-          <div class="site__report-button">
-            <button class="button" id="elem">Выполненно</button>
-          </div>
-        </div>
+        </article>
 
       </section>
-
+      <section class="site__manual invisibile">
+        <div class="site__manual-columns">
+          Manual
+        </div>
+      </section>
+      <section class="site__docs invisibile">
+        <div class="site__docs-columns">
+          Docs
+        </div>
+      </section>
+      <section class="site__popup">
+        <div class="site__popup-container">
+          <!-- <div class="site__popup-container-modal error">
+            <div class="site__popup-container-modal-inner error">
+              <div class="site__popup-container-modal-inner-header">
+                <h1>Произошла ошибка</h1>
+                <i class="material-icons" id="buttonClosePopUp">close</i>
+              </div>
+              <div class="site__popup-container-modal-inner-body">
+                <p>Произошла неожиданная ошибка. Попройбуйте зайти позже.</p>
+              </div>
+              <div class="site__popup-container-modal-inner-footer">
+                <div class="site__popup-container-modal-inner-footer-button">
+                  <button class="error">Закрыть</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
       <footer class="site__footer">
 
         <div class="site__footer-contact">

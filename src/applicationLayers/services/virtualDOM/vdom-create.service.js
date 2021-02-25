@@ -1,6 +1,5 @@
 let uniqID = 1;
 
-// eslint-disable-next-line no-unused-vars
 export class VDOMCreate {
   constructor($app = 'app') {
     // Корневой элемент
@@ -9,9 +8,7 @@ export class VDOMCreate {
   // Присваивает data-атрибут data-uniqID элементу
   // Такой же, какой присваивается новому узлу virtualDOM и связывает их
   dataUniqID($el, id) {
-    if (!$el.getAttribute('data-uniqID')) {
-      return $el.setAttribute('data-uniqID', id);
-    }
+    return $el.setAttribute('data-uniqID', id);
   }
   // Создает новый узел virtualDOM
   vnode(el, tag, props, children) {
@@ -48,7 +45,6 @@ export class VDOMCreate {
         {
           id: element.id,
           class: element.className,
-          dataset: element.dataset,
         },
         controlChildren(element.children)
     );

@@ -7,6 +7,9 @@ export class Button {
   }
   // Добавляет событие на кнопку
   addEvent(foo) {
-    this.$elementEffected.addEventListener( 'click', foo );
+    setTimeout(() => {
+      this.$elementEffected = document.getElementById(this.idElementEffected);
+      this.$elementEffected?.addEventListener( 'click', foo );
+    }, 100);
   }
 }
